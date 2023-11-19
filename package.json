@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "dev": "concurrently --kill-others \"npm run dev:host\" \"npm run dev:remote1\"",
+    "dev:host": "cd host && npm run dev",
+    "dev:remote1": "cd remote1 && npm run dev",
+    "serve": "concurrently --kill-others \"npm run serve:host\" \"npm run serve:remote1\"",
+    "serve:host": "cd host && npm run serve",
+    "serve:remote1": "cd remote1 && npm run serve",
+    "i": "npm run install",
+    "install": "npm run install:host && npm run install:remote1",
+    "install:host": "cd host && npm i",
+    "install:remote1": "cd remote1 && npm i",
+    "build": "npm run build:host && npm run build:remote1",
+    "build:host": "cd host && npm run build",
+    "build:remote1": "cd remote1 && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
