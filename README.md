@@ -1,0 +1,1 @@
+# vite-module-federation-example
